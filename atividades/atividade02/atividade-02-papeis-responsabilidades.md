@@ -25,9 +25,8 @@
 
 | Problema identificado | Possível consequência para o produto ou para a equipe |
 |---|---|
-| [preencher] | [preencher] |
-| [preencher] | [preencher] |
-| [preencher] | [preencher] |
+| [Priorização desequilibrada (pressão por novas features em detrimento de qualidade.)] | [Instabilidade em horários de pico de pedidos, aumento de bugs regressivos em produção, frustração dos usuários e sobrecarga do time com suporte contínuo.] |
+
 
 ### 2.2 Responsabilidade pela qualidade
 
