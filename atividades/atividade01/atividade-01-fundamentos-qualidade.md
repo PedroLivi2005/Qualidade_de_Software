@@ -64,7 +64,7 @@
 [Gemini IA.]
 
 **Como foi utilizada:**  
-[Dúvidas sobre arquivo .md no GitHub, dúvidas sobre o conseito de qualidade e requisitos.]
+[Dúvidas sobre arquivo .md no GitHub, ortografia, dúvidas sobre o conseito de qualidade e requisitos.]
 
 **Como as respostas foram verificadas:**  
-[As respostas foram verificadas com base o conteúdo visto em aula e no material disponível no blackboard.]
+[As respostas foram verificadas com base o conteúdo visto em aula e no material disponível no blackboard e pesquisas na web.]
