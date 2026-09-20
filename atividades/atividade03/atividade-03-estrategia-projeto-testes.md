@@ -40,7 +40,7 @@
 
 | Funcionalidade não incluída | Justificativa |
 |---|---|
-| [Busca] | [Número de integrantes do grupo] |
+| [Busca] | [Limitação no número de integrantes do grupo e escolha pessoal.] |
 
 ### 2.3 Abordagem
 
@@ -101,29 +101,43 @@
 **Aplicação da técnica:**  
 [Apresentem as classes, limites, combinações ou transições identificadas. Utilizem uma tabela ou lista quando necessário.]
 
-| Estado | Esvento |
+| Estado | Evento |
 |---|---|
 | Criado | [Pedido submetido pelo cliente, aguardando resposta da cobrança.] |
 | Confirmado | [Pagamento aprovado.] |
 | Em preparação | [Restaurante aceitou e iniciou o preparo do pedido.] |
 | Concluído | [Pedido entregue ao cliente.] |
+| Cancelado | [Pedido abortado pelo cliente ou pelo estabelecimento.] |
 
-**Casos derivados:** [CT01 e CT02]
+**Casos derivados:** [CT01: Verificar transição válida de Criado para Confirmado após retorno positivo de pagamento e 
+CT02: Verificar bloqueio de cancelamento com pedido quando está em preparação.]
 
 #### Análise do integrante 2
 
 **Integrante:** [nome]  
-**Funcionalidade:** [preencher]  
+**Funcionalidade:** [Fazer pedido]  
 **Risco relacionado:** [R02]  
-**Técnica escolhida:** [preencher]
+**Técnica escolhida:** [Tabela de decisão]
 
 **Por que a técnica foi escolhida:**  
-[preencher]
+[A técnica de Tabela de Decisão foi escolhida porque a finalização do pedido depende da combinação lógica de múltiplas condições de entrada.]
 
 **Aplicação da técnica:**  
-[preencher]
+| Condições | |
+|---|---|
+| C1 | [O item principal está disponível/em estoque?] |
+| C2 | [Os acompanhamentos/itens secundários selecionados estão disponíveis?] |
+| C3 | [O restaurante está aberto para pedidos no momento?] |
 
-**Casos derivados:** [preencher]
+| Ações | |
+|---|---|
+| A1 | [Permitir avançar para o pagamento.] |
+| A2 | [Bloquear finalização e alertar que o item principal está esgotado.] |
+| A3 | [Bloquear finalização e alertar sobre item adicional/secundário indisponível.] |
+| A4 | [Bloquear finalização informando que o restaurante está fechado.] |
+
+**Casos derivados:** [CT03: Finalizar pedido com todos os itens e adicionais disponíveis e restaurante aberto.
+CT04: Tentar submeter pedido contendo produto marcado como indisponível/esgotado no carrinho, verificando se o sistema bloqueia o avanço e exibe alerta visual ao cliente.]
 
 > Repitam ou removam a seção de análise conforme o número de integrantes.
 
@@ -135,51 +149,76 @@
 
 > No trabalho individual, elabore três casos. No trabalho em equipe, cada integrante deve elaborar pelo menos dois casos relacionados à própria funcionalidade.
 
-### CT01: [Título do caso]
+### CT01: [Transição de Estado de Pedido]
 
-**Integrante responsável:** [nome]  
-**Funcionalidade:** [preencher]  
-**Risco ou requisito relacionado:** [R01 ou descrição do requisito]  
-**Técnica utilizada:** [preencher]
+**Integrante responsável:** [Pedro]  
+**Funcionalidade:** [Fazer pedido]  
+**Risco ou requisito relacionado:** [R01]  
+**Técnica utilizada:** [Transição de estados]
 
 **Pré-condição:**  
-[O que precisa existir ou estar preparado antes da execução.]
+[O cliente precisa selecionar um item para efetuar o pagamento]
 
 **Dados de entrada:**  
-[Valores ou dados necessários. Caso não sejam necessários, registrem “Não se aplica”.]
+[Valores ou dados necessários: Forma de pagamento, dados do pagante e valor em dinheiro exigido.]
 
 **Passos:**
 
-1. [Primeiro passo.]
-2. [Segundo passo.]
-3. [Terceiro passo.]
+1. [Cliente preenche os dados e executa o pagamento.]
+2. [Confirmação do pagamento.]
+3. [Confirmação de pedido.]
 
 **Resultado esperado:**  
-[Comportamento observável que indicará que o teste passou.]
+[Comportamento observável que indicará que o teste passou: Mensagem de confirmação: Pedido Realizado!]
+[ver evidência](evidencias/confirmação_pedido.jpg)
 
 ---
 
-### CT02: [Título do caso]
+### CT02: [Bloqueio de Cancelamento]
 
-**Integrante responsável:** [nome]  
-**Funcionalidade:** [preencher]  
-**Risco ou requisito relacionado:** [preencher]  
-**Técnica utilizada:** [preencher]
+**Integrante responsável:** [Pedro]  
+**Funcionalidade:** [Fazer pedido]  
+**Risco ou requisito relacionado:** [R01]  
+**Técnica utilizada:** [transição de estados]
 
 **Pré-condição:**  
-[preencher]
+[Um pedido deve ter sido feito e chegado ao estado de "Em preparação".]
 
 **Dados de entrada:**  
-[preencher]
+[Todas as informações do pedido escolhido, pagamento, local de entrega.]
 
 **Passos:**
 
-1. [Primeiro passo.]
-2. [Segundo passo.]
-3. [Terceiro passo.]
+1. [Verificar status do pedido.]
+2. [Pedido Em preparação.]
+3. [Sistema bloqueia o cancelamento.]
 
 **Resultado esperado:**  
-[preencher]
+[Sistema deve recusar o cancelamento e exibir mensagem de bloqueio.]
+
+---
+
+### CT03: [Finalização de Pedido]
+
+**Integrante responsável:** [Pedro]  
+**Funcionalidade:** [Fazer pedido]  
+**Risco ou requisito relacionado:** [R02]  
+**Técnica utilizada:** [Tabela de decisão]
+
+**Pré-condição:**  
+[Um pedido deve ter sido selecionado.]
+
+**Dados de entrada:**  
+[Pedido e suas informações, incluindo possíveis itens adicionais/secundários.]
+
+**Passos:**
+
+1. [Cliente seleciona um pedido e se deseja adicionais.]
+2. [Verificação de estoque de item principal/secundário e horário de funcionamento do estabelecimento.]
+3. [Finalizar pedido com todos os itens e adicionais disponíveis e restaurante aberto.]
+
+**Resultado esperado:**  
+[Caso as verificações estejam ok, o pedido será feito.]
 
 ---
 
@@ -189,8 +228,7 @@
 
 | Integrante | Funcionalidade | Risco ou requisito | Técnica utilizada | Casos de teste |
 |---|---|---|---|---|
-| [nome] | [funcionalidade] | [R01 ou requisito] | [técnica] | [CT01 e CT02] |
-| [nome] | [funcionalidade] | [R02 ou requisito] | [técnica] | [CT03 e CT04] |
+| [Pedro] | [Fazer pedido] | [R01 e R02] | [transição de estados e Tabela de decisão] | [CT01, CT02, CT03 e CT04] |
 
 > Acrescentem as linhas necessárias. Verifiquem se todos os riscos selecionados possuem casos de teste relacionados.
 
@@ -199,13 +237,13 @@
 ## 5. Uso de inteligência artificial
 
 **Ferramenta utilizada:**  
-[Informar a ferramenta ou registrar “não utilizada”.]
+[Gemini AI.]
 
 **Como foi utilizada:**  
-[Descrever brevemente.]
+[Dúvidas sobre arquivo .md no GitHub, ortografia, dúvidas sobre o conseito de Casos de Teste, Risco e Técnicas.]
 
 **Uma sugestão que precisou ser alterada ou rejeitada:**  
-[Descrever brevemente. Caso nenhuma sugestão tenha sido rejeitada, expliquem como as sugestões foram analisadas criticamente.]
+[Rejeição de justificativa de técnica escolhida, pois acreditei que eu mesmo devo eleaborar a justificativa e escreve-la da forma que achar melhor.]
 
 **Como as respostas foram verificadas:**  
-[Descrever brevemente.]
+[As respostas foram verificadas com base o conteúdo visto em aula, no material disponível no blackboard e pesquisas na web.]
