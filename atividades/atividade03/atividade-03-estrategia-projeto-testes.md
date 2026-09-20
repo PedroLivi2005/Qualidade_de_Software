@@ -79,7 +79,6 @@
 | ID | Integrante | Funcionalidade | Risco | Consequência | Probabilidade | Impacto | Prioridade | Justificativa |
 |---|---|---|---|---|:---:|:---:|:---:|---|
 | R01 | [Pedro] | [Fazer pedido] | [o pagamento do pedido não foi processado] | [cliente/restaurante pois um não recebe e o outro não vende o produto] | [Médio] | [Alto] | [Alta] | [As chances de acontecer não são altas, porém caso aconteça pode gerar impactos consideraveis aos clientes, levandos a desistir de realizar um pedido.] |
-
 | R02 | [Pedro] | [Fazer pedido] | [o cliente realizar um pedido de um item que está fora de estoque ou indisponivel] | [o cliente pela quebra de expectativa ao pensar que o item desejado estivesse dísponivel.] | [Baixa] | [Baixo] | [Baixa] | [É algo com chances baixas de acontecer que pode ser resolvido com comunicação/organização.] |
 
 > Acrescentem as linhas necessárias e mantenham identificadores únicos: R01, R02, R03 etc.
