@@ -54,7 +54,7 @@
 
 | Integrante | Requisito de Qualidade | Característica ou subcaracterística | Justificativa | Como avaliar |
 |---|---|---|---|---|
-| [Pedro] | [Mostrar a data e hora de quando o pedido foi feito] | [Funcionalidade / Completude funcional (ISO/IEC 25010)] | [O usuário precisa saber quando realizou a compra para acompanhar prazos de entrega, rastreio e conferência financeira.] | [exibição de data/hora no formato padrão (DD/MM/AAAA HH:mm)] |
+| [Pedro] | [Mostrar a data e hora de quando o pedido foi feito] | [Funcionalidade / Completude funcional (ISO/IEC 25010)] | [O usuário precisa saber quando realizou a compra para acompanhar prazos de entrega, rastreio e conferência financeira.] | [Acessar a tela 'Meus Pedidos' com compras cadastradas e validar se os campos de data e horário estão visíveis, exibindo data/hora no formato padrão (DD/MM/AAAA HH:mm)] |
 
 ---
 
@@ -67,4 +67,4 @@
 [Dúvidas sobre arquivo .md no GitHub, ortografia, dúvidas sobre o conseito de qualidade e requisitos.]
 
 **Como as respostas foram verificadas:**  
-[As respostas foram verificadas com base o conteúdo visto em aula e no material disponível no blackboard e pesquisas na web.]
+[As respostas foram verificadas com base o conteúdo visto em aula e no material disponível no blackboard.]
