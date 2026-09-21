@@ -44,7 +44,7 @@
 
 | Integrante | Funcionalidade | O que foi realizado | O que foi observado | Evidência |
 |---|---|---|---|---|
-| [Pedro] | [Meus Pedidos] | [Uso esperado: Ver quais os pedidos que eu fiz. Uso alternativo: tentar verificar quando foi feito o pedido] | [Foi observado que os pedididos realizados de fato aparecem, porém não é possível ver a data que foram feitos] | [ver evidência](evidencias/evidencia1.png) |
+| [Pedro] | [Meus Pedidos] | [Uso esperado: Ver quais os pedidos que eu fiz. Uso alternativo: Tentar acessar os detalhes de um pedido específico para identificar dados da compra, como data e horário de realização.] | [Foi observado que os pedididos realizados de fato aparecem, porém não é possível ver a data que foram feitos.] | [ver evidência](evidencias/evidencia1.png) |
 
 ---
 
