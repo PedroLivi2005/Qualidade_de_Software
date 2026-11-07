@@ -9,8 +9,8 @@
 - **Turma:** [Qualidade de Software 26/2 manhã]
 - **Modalidade:** [individual]
 - **Repositório:** [https://github.com/PedroLivi2005/Qualidade_de_Software/tree/main]
-- **Diretório da atividade:** [colar o link direto para este diretório]
-- **Data da última execução:** [05/11/2026]
+- **Diretório da atividade:** [https://github.com/PedroLivi2005/Qualidade_de_Software/blob/main/atividades/atividade04/atividade-04-testes-automatizados.md]
+- **Data da última execução:** [06/11/2026]
 
 ### Integrantes
 
